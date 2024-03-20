@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { queryKeys } from "../../contants/react-query.ts";
-import { IPostRepository } from "../../domains/posts/repositories/IPostRepository.ts";
+import { queryKeys } from "../../../contants/react-query.ts";
+import { IPostRepository } from "../../../domains/posts/repositories/IPostRepository.ts";
 
 export const usePosts = (postRepository: IPostRepository) => {
   const { data, fetchNextPage, hasNextPage } = useInfiniteQuery({

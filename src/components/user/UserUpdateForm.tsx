@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useUpdateUser } from "../../hooks/queries/usePost.tsx";
+import { useUpdateUser } from "../../hooks/queries/posts/usePost.tsx";
 
 const UserUpdateForm = () => {
   const { mutate } = useUpdateUser();

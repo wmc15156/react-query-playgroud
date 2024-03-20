@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { usePostDetail } from "../hooks/queries/usePost.tsx";
+import { usePostDetail } from "../hooks/queries/posts/usePost.tsx";
 
 export default function PostPage() {
   const { postId } = useParams<"postId">(); //

@@ -1,8 +1,8 @@
-import { Post } from "./domains/posts/models/Posts.ts";
 import { useEffect, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
-import { usePrefetchPostDetail } from "./hooks/queries/usePost.tsx";
+import { usePrefetchPostDetail } from "./hooks/queries/posts/usePost.tsx";
+import { Post } from "./domains/posts/models/Post.ts";
 
 interface PostItemProps {
   post: Post;

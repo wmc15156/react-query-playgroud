@@ -1,5 +1,5 @@
 import React from "react";
-import { usePosts } from "./hooks/queries/usePosts.tsx";
+import { usePosts } from "./hooks/queries/posts/usePosts.tsx";
 import InfiniteScroll from "react-infinite-scroller";
 import PostItem from "./PostItem.tsx";
 import { useRepositories } from "./contexts/RepositoryContext.tsx";

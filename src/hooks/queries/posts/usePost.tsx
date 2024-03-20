@@ -1,8 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { queryKeys } from "../../contants/react-query.ts";
+import { queryKeys } from "../../../contants/react-query.ts";
 
-import { useRepositories } from "../../contexts/RepositoryContext.tsx";
-import { User } from "../../domains/users/models/Users.ts";
+import { useRepositories } from "../../../contexts/RepositoryContext.tsx";
+import { User } from "../../../domains/users/models/Users.ts";
 
 export const usePostDetail = (postId: number) => {
   const { postRepository } = useRepositories();
