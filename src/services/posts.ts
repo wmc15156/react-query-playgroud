@@ -1,4 +1,4 @@
-import { Post } from "../models/Posts.ts";
+import { Post } from "../domains/posts/models/Posts.ts";
 
 export const fetchPosts = async (page = 1): Promise<Post[]> => {
   const res = await fetch(

@@ -1,11 +1,11 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { queryKeys } from "../../contants/react-query.ts";
-import { fetchPosts } from "../../services/posts.ts";
+import { IPostRepository } from "../../domains/posts/repositories/IPostRepository.ts";
 
-export const usePosts = () => {
+export const usePosts = (postRepository: IPostRepository) => {
   const { data, fetchNextPage, hasNextPage } = useInfiniteQuery({
     queryKey: [queryKeys.posts],
-    queryFn: ({ pageParam }) => fetchPosts(pageParam),
+    queryFn: ({ pageParam }) => postRepository.fetchPosts(pageParam),
     initialPageParam: 1,
     getNextPageParam: (lastPage, allPages) => {
       if (!lastPage.length) {

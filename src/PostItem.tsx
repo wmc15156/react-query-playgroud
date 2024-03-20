@@ -1,4 +1,4 @@
-import { Post } from "./models/Posts.ts";
+import { Post } from "./domains/posts/models/Posts.ts";
 import { useEffect, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";

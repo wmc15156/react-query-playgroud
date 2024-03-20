@@ -2,10 +2,12 @@ import React from "react";
 import { usePosts } from "./hooks/queries/usePosts.tsx";
 import InfiniteScroll from "react-infinite-scroller";
 import PostItem from "./PostItem.tsx";
+import { useRepositories } from "./contexts/RepositoryContext.tsx";
 
 export default function PostList() {
-  const { data, fetchNextPage, hasNextPage } = usePosts();
-  console.log(data?.pages);
+  const { postRepository } = useRepositories();
+
+  const { data, fetchNextPage, hasNextPage } = usePosts(postRepository);
   return (
     <InfiniteScroll
       pageStart={0}

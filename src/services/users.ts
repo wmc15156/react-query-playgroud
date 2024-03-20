@@ -1,4 +1,4 @@
-import { User } from "../models/Users.ts";
+import { User } from "../domains/users/models/Users.ts";
 
 export const fetchUsers = async (): Promise<{ data: User[] }> => {
   const response = await fetch(`https://reqres.in/api/users?per_page=20`);

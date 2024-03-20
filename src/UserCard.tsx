@@ -1,4 +1,4 @@
-import { User } from "./models/Users.ts";
+import { User } from "./domains/users/models/Users.ts";
 
 interface UserCardProps {
   user: User;
